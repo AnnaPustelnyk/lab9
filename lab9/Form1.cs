@@ -184,8 +184,16 @@ namespace lab9
                     textBox1.Text = ans.ToString();
                     break;
                 case 4:
-                    ans = num1 / num2;
-                    textBox1.Text = ans.ToString();
+                    if (num2 == 0)
+                    {
+                        ans = num1 / num2;
+                        textBox1.Text = "Dividing by Zero is undefined";    
+                    }
+                    else
+                    {
+                        ans = num1 / num2;
+                        textBox1.Text = ans.ToString();   
+                    }
                     break;
                 case 5:
                     ans = num1 % num2;
